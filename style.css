@@ -1,0 +1,162 @@
+/* Global Reset and Main Layout background */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0b132b; /* Dark blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Yellow To-Do Container Card */
+.todo-container {
+    background-color: #f4b916; /* Matches the vibrant yellow */
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+}
+
+h2 {
+    text-align: center;
+    color: #0b132b;
+    margin-top: 0;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* Header Input Row */
+.input-section {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+#task-input {
+    flex: 2;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+#task-input::placeholder {
+    color: #999;
+}
+
+/* Blue Add Button */
+#add-btn {
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    padding: 0 16px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#add-btn:hover {
+    background-color: #1a5ecc;
+}
+
+/* Red Clear All Button */
+#clear-all-btn {
+    background-color: #d94536;
+    color: white;
+    border: none;
+    padding: 0 16px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#clear-all-btn:hover {
+    background-color: #b83528;
+}
+
+/* Tasks Container */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Task Item Row Box */
+li {
+    background-color: white;
+    padding: 14px 15px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.task-text {
+    font-size: 16px;
+    color: #333;
+    flex: 1;
+    word-break: break-word;
+    padding-right: 10px;
+}
+
+/* Text effect when marked complete */
+li.completed .task-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Wrapper for list actions */
+.action-btns {
+    display: flex;
+    gap: 6px;
+}
+
+/* Shared template styles for row action options */
+.row-btn {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+/* Green Check Button */
+.check-btn {
+    color: #27ae60;
+}
+
+.check-btn:hover {
+    background-color: #ebf7ee;
+}
+
+/* Completed Row styling modification for checkmarks */
+li.completed .check-btn {
+    background-color: #27ae60;
+    color: white;
+    border-color: #27ae60;
+}
+
+/* Soft Red/Orange Cross Button */
+.delete-btn {
+    background-color: #e26d5c;
+    color: white;
+    border: none;
+}
+
+.delete-btn:hover {
+    background-color: #c95646;
+}
